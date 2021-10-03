@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-json-modules .",
     "dev": "npx nodemon",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "build": "npx tsc"
   },
   "dependencies": {
     "chalk": "^4.1.1",

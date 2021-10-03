@@ -8,7 +8,7 @@
 
 This bot is written in [TypeScript](https://www.typescriptlang.org/). It's pretty cool!
 
-## Installing
+## Using
 
 ### DISCLAIMER: While these instructions are relatively generic, I am not guaranteeing that following them will not cause any damage to your computer. *Make sure you understand what you are doing!*
 <br>
@@ -19,35 +19,24 @@ Make sure you've created an [application](https://discord.com/developers/applica
 
 ### Running
 
-If you just want to run your own local instance of this bot:
-
 1. Download the ZIP of this respository and unzip it somewhere.
 
    * Alternatively, if you have [git](https://git-scm.com/), you can shallow-clone it to more easily update it in the future.
 
-2. Navigate to the project folder in your command line of choice.
+2. Install dependencies by running `npm install --production` in the repo folder.
 
-3. Run `npm install --production` to install dependencies.
-
-4. Create a file named `secrets.json` in [`dist/config`](dist/config) with the following format (replace `BOT-TOKEN` with your application's bot's token):
-```json
-{
-    "token": "BOT-TOKEN"
-}
-```
+3. Rename `secrets.example.json` in [`dist/config`](dist/config) to `secrets.json` and fill in your application's bot token.
 
 Now, you can launch the bot by running `npm start` in the project folder.
 
-### Contributing
+### Editing
 
-If you want to contribute or make your own changes to the bot:
+If you want to use this bot core or contribute, follow the steps in [Running](#Running), but with the following differences:
 
-1. Follow step 1 of [Running](#Running). It's strongly recommended to use git if you are planning on making any non-minor changes, preferably with a complete clone.
+1. It's strongly recommended to use git if you are planning on making any non-minor changes, preferably with a complete clone.
 
-2. Follow step 2 of [Running](#Running).
+2. Run `npm install` instead.
 
-3. Run `npm install`.
+3. Do the same thing, but in [`src/config`](src/config).
 
-4. Follow step 4 of [Running](#Running), but in [`src/config`](src/config).
-
-Now, you can launch the bot by running `npm dev`. This uses nodemon to re-build and restart the bot whenever a change is made to the source directory [`src`](src). You can also manually build with `npx tsc` and run with `npm start`.
+Now, you can launch the bot by running `npm run dev`. This uses [nodemon](https://nodemon.io/) to re-build and restart the bot whenever a change is made to the source directory [`src`](src). You can also manually build with `npm run build` and run with `npm start`.

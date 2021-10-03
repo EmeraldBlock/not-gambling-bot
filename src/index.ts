@@ -57,7 +57,7 @@ async function runBot() {
     const data = await initData();
 
     client.once("ready", async () => {
-        assert.notEqual(client.user, null);
+        assert(client.user !== null);
         console.log(chalk.yellow(client.user.tag) + " has logged on!");
         await client.user.setPresence({ activity: { name: `${config.prefix}help` } });
     });

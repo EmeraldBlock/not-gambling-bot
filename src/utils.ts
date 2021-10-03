@@ -1,8 +1,6 @@
 import Discord from "discord.js";
 
-export function floorDiv(a: number, b: number): number {
-    return Math.floor(a / b);
-}
+// general
 
 export function randFloat(a: number, b?: number): number {
     if (b === undefined) {
@@ -28,14 +26,6 @@ export function trimNewlines(str: string): string {
     return str.replace(/^.*\n|\n.*$/g, "");
 }
 
-export async function findAsync<T>(collection: Discord.Collection<unknown, T>, callback: (val: T) => Promise<boolean>): Promise<T | undefined> {
-    return (await Promise.all(collection.map(val => Promise.all([callback(val), val])))).find(result => result[0])?.[1];
-}
-
-export async function sleep(ms: number): Promise<void> {
-    return await new Promise(resolve => setTimeout(resolve, ms));
-}
-
 export function toEnglishList(array: Array<string>): string | undefined {
     switch (array.length) {
     case 0: {
@@ -51,6 +41,16 @@ export function toEnglishList(array: Array<string>): string | undefined {
         return `${array.slice(0, -1).join(", ")}, and ${array[-1]}`;
     }
     }
+}
+
+export async function sleep(ms: number): Promise<void> {
+    return await new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Discord
+
+export async function findAsync<T>(collection: Discord.Collection<unknown, T>, callback: (val: T) => Promise<boolean>): Promise<T | undefined> {
+    return (await Promise.all(collection.map(val => Promise.all([callback(val), val])))).find(result => result[0])?.[1];
 }
 
 export async function safeDelete(message: Discord.Message): Promise<Discord.Message> {

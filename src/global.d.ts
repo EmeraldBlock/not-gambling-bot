@@ -2,15 +2,6 @@
 
 // specifying types of some stuff
 
-import assert from "assert";
-
-declare module "assert" {
-    function strictEqual<T extends U, U>(actual: U, expected: T, message?: string | Error): asserts actual is T;
-    function notStrictEqual<T extends U, U>(actual: U, expected: T, message?: string | Error): asserts actual is Exclude<U, T>;
-    function deepStrictEqual<T extends U, U>(actual: U, expected: T, message?: string | Error): asserts actual is T;
-    function notDeepStrictEqual<T extends U, U>(actual: U, expected: T, message?: string | Error): asserts actual is Exclude<U, T>;
-}
-
 declare module "discord.js" {
     interface Collection<K, V> {
         // adds type-narrowing
