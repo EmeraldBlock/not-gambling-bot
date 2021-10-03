@@ -23,9 +23,13 @@ Make sure you've created an [application](https://discord.com/developers/applica
 
    * Alternatively, if you have [git](https://git-scm.com/), you can shallow-clone it to more easily update it in the future.
 
-2. Install dependencies by running `npm install --production` in the repo folder.
+2. Download the corresponding `dist` ZIP from the current commit's build artifacts and unzip it in the project folder.
 
-3. Rename `secrets.example.json` in [`dist/config`](dist/config) to `secrets.json` and fill in your application's bot token.
+   * To download, click on the check in the commit above the files, then the details of Build, then the Artifacts in the top right, then the dist download.
+
+3. Install dependencies by running `npm install --production` in the repo folder.
+
+4. Rename `secrets.example.json` in [`dist/config`](dist/config) to `secrets.json` and fill in your application's bot token.
 
 Now, you can launch the bot by running `npm start` in the project folder.
 
@@ -35,8 +39,10 @@ If you want to use this bot core or contribute, follow the steps in [Running](#R
 
 1. It's strongly recommended to use git if you are planning on making any non-minor changes, preferably with a complete clone.
 
-2. Run `npm install` instead.
+2. *skip*
 
-3. Do the same thing, but in [`src/config`](src/config).
+3. Run `npm install` instead.
+
+4. Do the same thing, but in [`src/config`](src/config).
 
 Now, you can launch the bot by running `npm run dev`. This uses [nodemon](https://nodemon.io/) to re-build and restart the bot whenever a change is made to the source directory [`src`](src). You can also manually build with `npm run build` and run with `npm start`.
