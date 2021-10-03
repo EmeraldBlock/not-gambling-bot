@@ -13,7 +13,7 @@ This bot is written in [TypeScript](https://www.typescriptlang.org/). It's prett
 ### DISCLAIMER: While these instructions are relatively generic, I am not guaranteeing that following them will not cause any damage to your computer. *Make sure you understand what you are doing!*
 <br>
 
-This bot requires [Node.js](https://nodejs.org/). I'm not sure the specific versions that work, but any 16.X should work fine.
+This bot requires [Node.js](https://nodejs.org/). I'm not sure the specific versions that work, but any 16.7+ should work fine.
 
 Make sure you've created an [application](https://discord.com/developers/applications) in the Discord Developer Portal and have added a bot. ([Tutorial](https://discordjs.guide/preparations/setting-up-a-bot-application.html) from the Discord.js Guide)
 

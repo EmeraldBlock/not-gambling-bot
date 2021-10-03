@@ -4,14 +4,14 @@
   "description": "A Discord gambling bot without gambling.",
   "license": "ISC",
   "author": "EmeraldBlock",
-  "main": "./dist/index.js",
+  "main": "./dist/js/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-json-modules .",
     "dev": "npx nodemon",
     "lint": "npx eslint .",
-    "build": "npx tsc"
+    "build": "node ./tools/clear-copy.js && npx tsc"
   },
   "dependencies": {
     "chalk": "^4.1.1",

@@ -1,5 +1,5 @@
 {
     "watch": ["./src/"],
     "ext": "*",
-    "exec": "npx tsc && node --inspect --enable-source-maps --experimental-json-modules ."
+    "exec": "npm run build && node --inspect --enable-source-maps --experimental-json-modules ."
 }
